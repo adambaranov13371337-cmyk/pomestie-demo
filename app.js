@@ -197,6 +197,7 @@ function addSwipe(element, handleTurn) {
   let start = null;
   let suppressClickUntil = 0;
   element.addEventListener('touchstart', event => {
+    suppressClickUntil = 0;
     start = event.touches.length === 1 ? event.touches[0] : null;
   }, {passive: true});
   element.addEventListener('touchcancel', () => { start = null; });
