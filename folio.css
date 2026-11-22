@@ -163,3 +163,36 @@
 @media (max-width: 760px) and (min-height: 620px) {
   .room-list button { scroll-margin-block-start: min(38svh, 320px); }
 }
+
+.project-trail {
+  display:flex;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:6px 12px;
+  padding-top:clamp(15px,2vw,28px);
+  color:#546454;
+  font:500 .84rem/1.5 var(--sans,Arial,sans-serif);
+}
+.project-trail a { text-decoration:underline; text-decoration-color:#9caa98; text-underline-offset:4px; }
+.project-trail [aria-current] { color:var(--ink); }
+.project-trail a:focus-visible { outline-offset:3px; }
+.project-trail + .project-cover { padding-top:clamp(18px,2.4vw,36px); }
+.contact .socials { display:flex; align-items:center; gap:12px; }
+.contact .socials a {
+  display:inline-grid;
+  place-items:center;
+  padding:0;
+  width:44px;
+  height:44px;
+  flex:none;
+  color:#f7f6eb;
+  border:1px solid #87978a;
+  border-radius:50%;
+  transition:background .18s ease, color .18s ease;
+}
+.contact .socials a svg { width:21px; height:21px; display:block; }
+.contact .socials a:focus-visible { outline:2px solid #f1dea5; outline-offset:3px; }
+@media (hover:hover) {
+  .contact .socials a:hover { color:var(--forest); background:#f3efdc; }
+}
+.foot-grid nav .unavailable { display:block; color:#626c60; font-size:.86rem; padding:3px 0; }
